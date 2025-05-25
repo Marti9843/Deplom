@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="register-page">
+    <div class="register-card">
+        <div class="register-header">
+            <h1>Реєстрація</h1>
+            <p>Створіть новий обліковий запис</p>
+        </div>
+
+        {% if form.errors %}
+        <div class="register-error">
+            <span class="material-icons">error</span>
+            <p>Будь ласка, виправте помилки нижче</p>
+        </div>
+        {% endif %}
+
+        <form method="post" class="register-form" novalidate>
+            {% csrf_token %}
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="id_first_name">Ім'я</label>
+                    <div class="input-with-icon">
+                        <span class="material-icons">person</span>
+                        <input type="text" id="id_first_name" name="first_name" required placeholder="Ваше ім'я">
+                    </div>
+                    {% if form.first_name.errors %}
+                    <div class="field-error">
+                        {{ form.first_name.errors }}
+                    </div>
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    <label for="id_last_name">Прізвище</label>
+                    <div class="input-with-icon">
+                        <span class="material-icons">person</span>
+                        <input type="text" id="id_last_name" name="last_name" required placeholder="Ваше прізвище">
+                    </div>
+                    {% if form.last_name.errors %}
+                    <div class="field-error">
+                        {{ form.last_name.errors }}
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="id_phone">Номер телефону</label>
+                <div class="input-with-icon">
+                    <span class="material-icons">phone</span>
+                    <input type="tel" id="id_phone" name="phone" required placeholder="+380XXXXXXXXX">
+                </div>
+                {% if form.phone.errors %}
+                <div class="field-error">
+                    {{ form.phone.errors }}
+                </div>
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                <label for="id_email">Електронна адреса</label>
+                <div class="input-with-icon">
+                    <span class="material-icons">email</span>
+                    <input type="email" id="id_email" name="email" required placeholder="example@example.com">
+                </div>
+                {% if form.email.errors %}
+                <div class="field-error">
+                    {{ form.email.errors }}
+                </div>
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                <label for="id_username">Ім'я користувача</label>
+                <div class="input-with-icon">
+                    <span class="material-icons">account_circle</span>
+                    <input type="text" id="id_username" name="username" required placeholder="Оберіть ім'я користувача">
+                </div>
+                {% if form.username.errors %}
+                <div class="field-error">
+                    {{ form.username.errors }}
+                </div>
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                <label for="id_password1">Пароль</label>
+                <div class="input-with-icon">
+                    <span class="material-icons">lock</span>
+                    <input type="password" id="id_password1" name="password1" required placeholder="Створіть пароль">
+                    <button type="button" class="toggle-password" aria-label="Показати пароль" data-target="id_password1,id_password2">
+                        <span class="material-icons">visibility</span>
+                    </button>
+                </div>
+                <div class="password-hints">
+                    <small>Пароль повинен містити принаймні 8 символів</small>
+                </div>
+                {% if form.password1.errors %}
+                <div class="field-error">
+                    {{ form.password1.errors }}
+                </div>
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                <label for="id_password2">Підтвердіть пароль</label>
+                <div class="input-with-icon">
+                    <span class="material-icons">lock</span>
+                    <input type="password" id="id_password2" name="password2" required placeholder="Повторіть пароль">
+                </div>
+                {% if form.password2.errors %}
+                <div class="field-error">
+                    {{ form.password2.errors }}
+                </div>
+                {% endif %}
+            </div>
+
+            <button type="submit" class="register-button">
+                <span>Зареєструватися</span>
+            </button>
+
+            <div class="login-link">
+                Вже маєте акаунт? <a href="{% url 'accounts:login' %}">Увійти</a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/accounts/register.css' %}">
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'js/accounts/register.js' %}"></script>
+{% endblock %}

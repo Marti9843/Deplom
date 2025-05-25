@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/news/detail.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="news-detail-hero">
+    <div class="news-detail-hero-content">
+        <h1>{{ news.title }}</h1>
+    </div>
+</section>
+
+<section class="news-detail-section">
+    <div class="container">
+        <article class="news-detail-article">
+            <div class="news-meta">
+                <div class="news-date">{{ news.date_published|date:"d.m.Y" }}</div>
+            </div>
+
+            {% if news.image %}
+            <div class="news-detail-image">
+                <img src="{{ news.image.url }}" alt="{{ news.title }}">
+            </div>
+            {% endif %}
+
+            <div class="news-detail-content">
+                {{ news.content|linebreaks }}
+            </div>
+
+            <div class="news-back-link">
+                <a href="{% url 'news:list' %}">← Повернутися до всіх новин</a>
+            </div>
+        </article>
+    </div>
+</section>
+{% endblock %}

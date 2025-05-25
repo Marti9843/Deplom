@@ -1,0 +1,469 @@
+:root {
+    --text-color: #2c3e50;
+    --text-secondary: #6c757d;
+    --border-color: #e2e8f0;
+    --card-bg: #ffffff;
+    --background: #f5f7fa;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --radius: 12px;
+    --input-radius: 8px;
+    --transition: all 0.3s ease;
+    --content-primary: #4361ee;
+    --content-primary-hover: #3a56d4;
+}
+
+/* Базові стилі */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    background-color: var(--background);
+    margin: 0;
+    padding: 0;
+    text-decoration: none !important; /* Фікс для перекреслення */
+}
+
+* {
+    text-decoration: none !important; /* Глобальний фікс */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 80px 0;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 40px;
+    text-decoration: none !important;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+/* Герой секція */
+.hero-section {
+    background: linear-gradient(rgba(67, 97, 238, 0.9), rgba(67, 97, 238, 0.9)),
+                url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 70vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    text-decoration: none !important;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-decoration: none !important;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: white;
+    color: var(--content-primary);
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none !important;
+    transition: var(--transition);
+    font-size: 1rem;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+    border-color: white;
+    background-color: transparent;
+    color: white;
+}
+
+.admin-btn {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.admin-btn:hover {
+    background-color: white;
+    color: var(--content-primary);
+}
+
+/* Секції */
+.features-section {
+    background-color: white;
+    text-decoration: none !important;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+}
+
+.feature-card {
+    background: var(--card-bg);
+    padding: 40px 25px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+    text-decoration: none !important;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-card .material-icons {
+    font-size: 50px;
+    color: var(--content-primary);
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Відгуки */
+.testimonials-section {
+    background-color: var(--background);
+}
+
+.testimonials-slider {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+}
+
+.testimonial-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-header h3 {
+    color: var(--content-primary);
+    margin: 0 0 10px 0;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 15px 0 0 0;
+}
+
+.client-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.client-info h4 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.rating {
+    display: flex;
+    gap: 3px;
+}
+
+.rating .material-icons {
+    font-size: 18px;
+    color: gold;
+}
+
+/* Форма відгуку */
+.feedback-section {
+    background-color: var(--content-primary);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.feedback-section h3 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.feedback-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: white;
+    color: var(--content-primary);
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    text-decoration: none !important;
+    border: 2px solid transparent;
+    font-size: 1rem;
+}
+
+.feedback-button:hover {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+    transform: translateY(-3px);
+}
+
+.feedback-button .material-icons {
+    font-size: 1.2em;
+}
+
+/* Модальне вікно */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2000;
+    overflow-y: auto;
+}
+
+.modal-content {
+    background: var(--card-bg);
+    margin: 5% auto;
+    padding: 40px;
+    border-radius: var(--radius);
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    animation: modalOpen 0.3s;
+    box-sizing: border-box;
+}
+
+@keyframes modalOpen {
+    from {opacity: 0; transform: translateY(-50px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.close-modal {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--text-secondary);
+    transition: var(--transition);
+}
+
+.close-modal:hover {
+    color: var(--text-color);
+}
+
+.modal h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--content-primary);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--input-radius);
+    font-size: 16px;
+    font-family: inherit;
+    transition: var(--transition);
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--content-primary);
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.rating-selector {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.rating-selector .material-icons {
+    font-size: 36px;
+    cursor: pointer;
+    color: #ddd;
+    transition: var(--transition);
+}
+
+.rating-selector .material-icons.active,
+.rating-selector .material-icons:hover {
+    color: gold;
+}
+
+.submit-button {
+    background-color: var(--content-primary);
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: var(--input-radius);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto 0;
+    display: block;
+}
+
+.submit-button:hover {
+    background-color: var(--content-primary-hover);
+    transform: translateY(-3px);
+}
+
+/* Мобільна версія */
+@media (max-width: 768px) {
+    section {
+        padding: 60px 0;
+    }
+
+    .hero-section {
+        height: 60vh;
+        min-height: 400px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .features-grid,
+    .testimonials-slider {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card {
+        padding: 30px 20px;
+    }
+
+    .testimonial-card {
+        padding: 25px;
+    }
+
+    .modal-content {
+        padding: 30px 20px;
+    }
+
+    .rating-selector .material-icons {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        height: 50vh;
+        min-height: 350px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .cta-button,
+    .feedback-button {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+
+    .testimonial-header h3 {
+        font-size: 1.1rem;
+    }
+
+    .client-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .modal-content {
+        margin: 10% auto;
+        padding: 20px 15px;
+    }
+}
+
+@media (max-width: 360px) {
+    .hero-content h1 {
+        font-size: 1.6rem;
+    }
+
+    .feedback-button {
+        padding: 10px 20px;
+    }
+}

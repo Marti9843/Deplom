@@ -1,0 +1,353 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/services/yoga.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="yoga-hero">
+    <div class="yoga-hero-content">
+        <h1>Йога у СпортЦентрі</h1>
+        <p>Знайдіть гармонію тіла та духу</p>
+    </div>
+</section>
+
+<section class="yoga-benefits">
+    <div class="container">
+        <div class="section-header">
+            <h2>Чому варто обирати йогу?</h2>
+            <p class="section-description">Йога - це не просто фізичні вправи, а цілісний підхід до здоров'я</p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <span class="material-icons">self_improvement</span>
+                <h3>Гнучкість</h3>
+                <p>Покращуємо рухливість суглобів та еластичність м'язів</p>
+            </div>
+            <div class="benefit-card">
+                <span class="material-icons">psychology</span>
+                <h3>Розслаблення</h3>
+                <p>Знімаємо стрес та напругу повсякденного життя</p>
+            </div>
+            <div class="benefit-card">
+                <span class="material-icons">favorite</span>
+                <h3>Здоров'я</h3>
+                <p>Покращуємо роботу серцево-судинної системи</p>
+            </div>
+            <div class="benefit-card">
+                <span class="material-icons">balance</span>
+                <h3>Рівновага</h3>
+                <p>Розвиваємо координацію та контроль над тілом</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Напрямки йоги -->
+<section class="about-section yoga-directions">
+    <div class="container">
+        <div class="section-header">
+            <h2>Напрямки йоги</h2>
+            <p class="section-description">Оберіть стиль, який вам підходить</p>
+        </div>
+
+        <div class="yoga-grid">
+            <!-- Хатха-йога -->
+            <div class="yoga-card">
+                <div class="yoga-photo-container">
+                    <img src="{% static 'images/services/hatha.jpg' %}" alt="Хатха-йога" class="yoga-photo">
+                </div>
+                <div class="yoga-card-content">
+                    <h3>Хатха-йога</h3>
+                    <p class="yoga-style">Класичний стиль</p>
+                    <div class="yoga-details">
+                        <p>Асани + пранаяма + медитація</p>
+                        <p>Тривалість: 60-90 хв</p>
+                        <p>Рівень: Для всіх</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Віньяса-флоу -->
+            <div class="yoga-card">
+                <div class="yoga-photo-container">
+                    <img src="{% static 'images/services/vinyasa.jpg' %}" alt="Віньяса-флоу" class="yoga-photo">
+                </div>
+                <div class="yoga-card-content">
+                    <h3>Віньяса-флоу</h3>
+                    <p class="yoga-style">Динамічний стиль</p>
+                    <div class="yoga-details">
+                        <p>Плавні переходи між асанами</p>
+                        <p>Тривалість: 60 хв</p>
+                        <p>Рівень: Середній</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Айєнгара -->
+            <div class="yoga-card">
+                <div class="yoga-photo-container">
+                    <img src="{% static 'images/services/iyengar.jpg' %}" alt="Йога Айєнгара" class="yoga-photo">
+                </div>
+                <div class="yoga-card-content">
+                    <h3>Йога Айєнгара</h3>
+                    <p class="yoga-style">Точний метод</p>
+                    <div class="yoga-details">
+                        <p>Використання пропсів</p>
+                        <p>Тривалість: 90 хв</p>
+                        <p>Рівень: Для всіх</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Інтегральна йога -->
+            <div class="yoga-card">
+                <div class="yoga-photo-container">
+                    <img src="{% static 'images/services/integral.jpg' %}" alt="Інтегральна йога" class="yoga-photo">
+                </div>
+                <div class="yoga-card-content">
+                    <h3>Інтегральна йога</h3>
+                    <p class="yoga-style">Гармонійний стиль</p>
+                    <div class="yoga-details">
+                        <p>Фізичні вправи + медитація</p>
+                        <p>Тривалість: 75 хв</p>
+                        <p>Рівень: Для всіх</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="yoga-schedule">
+    <div class="container">
+        <div class="section-header">
+            <h2>Розклад занять</h2>
+            <p class="section-description">Оберіть зручний для вас час</p>
+        </div>
+
+        <div class="schedule-tabs">
+            <div class="tab active" data-day="monday">Понеділок</div>
+            <div class="tab" data-day="tuesday">Вівторок</div>
+            <div class="tab" data-day="wednesday">Середа</div>
+            <div class="tab" data-day="thursday">Четвер</div>
+            <div class="tab" data-day="friday">П'ятниця</div>
+            <div class="tab" data-day="saturday">Субота</div>
+        </div>
+
+        <!-- Понеділок -->
+        <div class="schedule-content active" id="monday">
+            <div class="schedule-item">
+                <div class="time">08:00 - 09:00</div>
+                <div class="class-info">
+                    <h4>Хатха-йога</h4>
+                    <p>Шевченко Андрій</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+            <div class="schedule-item">
+                <div class="time">18:30 - 19:30</div>
+                <div class="class-info">
+                    <h4>Віньяса-флоу</h4>
+                    <p>Шевченко Андрій</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+        </div>
+
+        <!-- Вівторок -->
+        <div class="schedule-content" id="tuesday">
+            <div class="schedule-item">
+                <div class="time">08:00 - 09:00</div>
+                <div class="class-info">
+                    <h4>Хатха-йога</h4>
+                    <p>Шевченко Андрій</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+            <div class="schedule-item">
+                <div class="time">18:30 - 19:45</div>
+                <div class="class-info">
+                    <h4>Інтегральна йога</h4>
+                    <p>Шевченко Андрій</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+        </div>
+
+        <!-- Середа -->
+        <div class="schedule-content" id="wednesday">
+            <div class="schedule-item">
+                <div class="time">08:00 - 09:00</div>
+                <div class="class-info">
+                    <h4>Хатха-йога</h4>
+                    <p>Шевченко Андрій</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+            <div class="schedule-item">
+                <div class="time">18:30 - 20:00</div>
+                <div class="class-info">
+                    <h4>Йога Айєнгара</h4>
+                    <p>Шевченко Андрій</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+        </div>
+
+        <!-- Четвер -->
+        <div class="schedule-content" id="thursday">
+            <div class="schedule-item">
+                <div class="time">08:00 - 09:00</div>
+                <div class="class-info">
+                    <h4>Хатха-йога</h4>
+                    <p>Шевченко Андрій</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+            <div class="schedule-item">
+                <div class="time">18:30 - 19:30</div>
+                <div class="class-info">
+                    <h4>Віньяса-флоу</h4>
+                    <p>Шевченко Андрій</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+        </div>
+
+        <!-- П'ятниця -->
+        <div class="schedule-content" id="friday">
+            <div class="schedule-item">
+                <div class="time">08:00 - 09:00</div>
+                <div class="class-info">
+                    <h4>Хатха-йога</h4>
+                    <p>Шевченко Андрій</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+            <div class="schedule-item">
+                <div class="time">18:30 - 19:45</div>
+                <div class="class-info">
+                    <h4>Інтегральна йога</h4>
+                    <p>Шевченко Андрій</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+        </div>
+
+        <!-- Субота -->
+        <div class="schedule-content" id="saturday">
+            <div class="schedule-item">
+                <div class="time">09:00 - 10:30</div>
+                <div class="class-info">
+                    <h4>Хатха-йога</h4>
+                    <p>Шевченко Андрій</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+            <div class="schedule-item">
+                <div class="time">11:00 - 12:00</div>
+                <div class="class-info">
+                    <h4>Віньяса-флоу</h4>
+                    <p>Шевченко Андрій</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+            <div class="schedule-item">
+                <div class="time">12:30 - 13:45</div>
+                <div class="class-info">
+                    <h4>Інтегральна йога</h4>
+                    <p>Шевченко Андрій</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+            <div class="schedule-item">
+                <div class="time">18:30 - 20:00</div>
+                <div class="class-info">
+                    <h4>Йога Айєнгара</h4>
+                    <p>Шевченко Андрій</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="yoga-pricing">
+    <div class="container">
+        <div class="section-header">
+            <h2>Вартість занять</h2>
+            <p class="section-description">Оберіть оптимальний варіант</p>
+        </div>
+
+        <div class="pricing-options">
+            <div class="pricing-category">
+                <div class="pricing-header">
+                    <h3>Разові заняття</h3>
+                </div>
+                <div class="pricing-grid">
+                    <div class="price-item">
+                        <div class="price-label">Дорослі</div>
+                        <div class="price-value">250 грн</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-label">Студенти</div>
+                        <div class="price-value">200 грн</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-label">Діти (7-13 років)</div>
+                        <div class="price-value">150 грн</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-label">Пенсіонери</div>
+                        <div class="price-value">175 грн</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-category">
+                <div class="pricing-header">
+                    <h3>Абонементи (1 місяць)</h3>
+                </div>
+                <div class="pricing-grid">
+                    <div class="price-item">
+                        <div class="price-label">4 заняття</div>
+                        <div class="price-value">790 грн</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-label">8 занять</div>
+                        <div class="price-value">1100 грн</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-label">12 занять</div>
+                        <div class="price-value">1500 грн</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-label">Безліміт</div>
+                        <div class="price-value">2200 грн</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="yoga-requirements">
+    <div class="container">
+        <div class="requirements-container">
+            <h3 class="requirements-title">Важлива інформація</h3>
+            <ul class="requirements-list">
+                <li>Абонементи дійсні 30 днів з моменту активації</li>
+                <li>Заняття не переносяться на наступний місяць</li>
+                <li>При собі необхідно мати килимок або орендувати на місці (50 грн)</li>
+                <li>Перед першим заняттям обов'язкова консультація з інструктором</li>
+                <li>Усі заняття проводяться за попереднім записом</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<script src="{% static 'js/services/yoga.js' %}"></script>
+{% endblock %}

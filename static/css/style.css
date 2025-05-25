@@ -1,0 +1,207 @@
+:root {
+    --primary-color: #4cc9f0;
+    --dark-bg: #1a1a2e;
+    --light-text: #f8f9fa;
+    --hover-bg: #2a2a3a;
+    --section-bg: rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Мобільний хедер */
+.mobile-header {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: var(--dark-bg);
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    z-index: 1100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-toggle:focus {
+    outline: none;
+}
+
+/* Бічна панель */
+.sidebar {
+    width: 280px;
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    height: 100vh;
+    position: fixed;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-100%);
+}
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+.sidebar-header {
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    font-size: 32px;
+    color: var(--primary-color);
+}
+
+.logo-text {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: white;
+}
+
+.nav-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px 0;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    margin: 2px 0;
+}
+
+.nav-link, .service-link {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: var(--light-text);
+    text-decoration: none;
+    transition: var(--transition);
+    gap: 12px;
+}
+
+.nav-link:hover, .service-link:hover {
+    background-color: var(--hover-bg);
+    color: var(--primary-color);
+}
+
+.nav-link.active, .service-link.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.services-group {
+    padding-left: 20px;
+    border-left: 2px solid var(--primary-color);
+    margin: 5px 0 5px 20px;
+}
+
+.user-section {
+    padding: 15px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: var(--section-bg);
+}
+
+/* Оверлей */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+
+.overlay.active {
+    display: block;
+}
+
+/* Основний контент */
+.main-content {
+    margin-left: 0;
+    padding: 20px;
+    min-height: 100vh;
+    transition: margin-left 0.3s;
+}
+
+/* Десктоп версія */
+@media (min-width: 769px) {
+    .sidebar {
+        transform: translateX(0);
+    }
+
+    .main-content {
+        margin-left: 280px;
+    }
+
+    .mobile-header {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-header {
+        display: flex;
+        position: fixed; /* Фіксуємо хедер */
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: var(--dark-bg);
+    }
+
+    .main-content {
+        padding-top: 60px; /* Змінюємо margin-top на padding-top */
+        min-height: calc(100vh - 60px); /* Враховуємо висоту хедера */
+        box-sizing: border-box; /* Щоб padding не додавав зайву висоту */
+    }
+
+    .sidebar {
+        top: 60px; /* Зміщуємо сайдбар під хедер */
+        height: calc(100vh - 60px); /* Враховуємо хедер */
+    }
+
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    .sidebar-header {
+        display: none;
+    }
+}

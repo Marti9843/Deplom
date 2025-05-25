@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}СпортЦентр{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block css %}{% endblock %}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <!-- Мобільний хедер -->
+    <header class="mobile-header">
+        <button class="menu-toggle">
+            <span class="material-icons">menu</span>
+        </button>
+        <div class="logo">
+            <span class="material-icons logo-icon">sports</span>
+            <h1 class="logo-text">СпортЦентр</h1>
+        </div>
+    </header>
+
+    <!-- Оверлей -->
+    <div class="overlay"></div>
+
+    <!-- Бічна панель -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <span class="material-icons logo-icon">sports</span>
+                <h1 class="logo-text">СпортЦентр</h1>
+            </div>
+        </div>
+
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="{% url 'services:booking' %}" class="nav-link">
+                        <span class="material-icons nav-icon">edit_calendar</span>
+                        <span>Запис на послуги</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{% url 'home' %}" class="nav-link">
+                        <span class="material-icons nav-icon">home</span>
+                        <span>Головна</span>
+                    </a>
+                    <div class="services-group">
+                        <a href="{% url 'services:fitness' %}" class="service-link">
+                            <span>Фітнес</span>
+                        </a>
+                        <a href="{% url 'services:pool' %}" class="service-link">
+                            <span>Басейн</span>
+                        </a>
+                        <a href="{% url 'services:yoga' %}" class="service-link">
+                            <span>Йога</span>
+                        </a>
+                        <a href="{% url 'services:massage' %}" class="service-link">
+                            <span>Масаж</span>
+                        </a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{% url 'about' %}" class="nav-link">
+                        <span class="material-icons nav-icon">info</span>
+                        <span>Про нас</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{% url 'news:list' %}" class="nav-link">
+                        <span class="material-icons nav-icon">article</span>
+                        <span>Новини</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="user-section">
+            {% if user.is_authenticated %}
+                <a href="{% url 'accounts:profile' %}" class="nav-link">
+                    <span class="material-icons nav-icon">account_circle</span>
+                    <span>Профіль</span>
+                </a>
+                {% if user.is_staff %}
+                <a href="{% url 'admin:index' %}" class="nav-link">
+                    <span class="material-icons nav-icon">admin_panel_settings</span>
+                    <span>Адмін панель</span>
+                </a>
+                {% endif %}
+                <form action="{% url 'accounts:logout' %}" method="post" style="display: contents;">
+                    {% csrf_token %}
+                    <button type="submit" class="nav-link" style="background: none; border: none; cursor: pointer; text-align: left; width: 100%;">
+                        <span class="material-icons nav-icon">logout</span>
+                        <span>Вийти</span>
+                    </button>
+                </form>
+            {% else %}
+                <a href="{% url 'accounts:login' %}" class="nav-link">
+                    <span class="material-icons nav-icon">login</span>
+                    <span>Увійти</span>
+                </a>
+            {% endif %}
+        </div>
+    </aside>
+
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <script src="{% static 'js/navigation.js' %}"></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

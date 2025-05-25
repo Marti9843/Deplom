@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="verify-email-page">
+    <div class="verify-email-container">
+        <div class="verify-email-card">
+            <div class="verify-email-header">
+                <h1>Підтвердження Email</h1>
+                <p>Введіть вашу електронну адресу для повторної відправки листа підтвердження</p>
+            </div>
+
+            {% if messages %}
+            <div class="verify-email-messages">
+                {% for message in messages %}
+                <div class="message {{ message.tags }}">
+                    <span class="material-icons">info</span>
+                    <p>{{ message }}</p>
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            <form method="post" class="verify-email-form">
+                {% csrf_token %}
+
+                <div class="form-group">
+                    <label for="id_email">Електронна адреса</label>
+                    <div class="input-container">
+                        <span class="material-icons input-icon">email</span>
+                        <input type="email" id="id_email" name="email" required
+                               placeholder="Ваша електронна адреса" class="email-input">
+                    </div>
+                    {% if form.email.errors %}
+                    <div class="error-message">
+                        {{ form.email.errors }}
+                    </div>
+                    {% endif %}
+                </div>
+
+                <button type="submit" class="submit-button">
+                    Надіслати лист підтвердження
+                </button>
+            </form>
+
+            <div class="back-link">
+                <a href="{% url 'accounts:login' %}">Повернутися до входу</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/accounts/verify_email.css' %}">
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'js/accounts/verify_email.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/pages/home.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="hero-section">
+    <div class="hero-content">
+        <h1>СпортЦентр - твій простір для здоров'я</h1>
+        <p>Сучасне обладнання, професійні тренери та індивідуальний підхід</p>
+        {% if user.is_authenticated %}
+            <a href="{% url 'services:booking' %}" class="cta-button">Записатись на тренування</a>
+        {% else %}
+            <a href="{% url 'accounts:login' %}?next={% url 'services:booking' %}" class="cta-button">Записатись на тренування</a>
+        {% endif %}
+    </div>
+</section>
+
+<section class="features-section">
+    <div class="container">
+        <h2>НАШІ ПЕРЕВАГИ</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <span class="material-icons">sports_gymnastics</span>
+                <h3>30+ видів тренувань</h3>
+                <p>Від класичного фітнесу до ексклюзивних програм</p>
+            </div>
+            <div class="feature-card">
+                <span class="material-icons">groups</span>
+                <h3>Професійні тренери</h3>
+                <p>Сертифіковані спеціалісти з досвідом 5+ років</p>
+            </div>
+            <div class="feature-card">
+                <span class="material-icons">cleaning_services</span>
+                <h3>Ідеальна чистота</h3>
+                <p>Щоденна дезінфекція всіх приміщень</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="testimonials-section">
+    <div class="container">
+        <h2>ВІДГУКИ КЛІЄНТІВ</h2>
+        <div class="testimonials-slider">
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <h3>Чудовий досвід</h3>
+                    <div class="client-info">
+                        <h4>Анна Коваленко</h4>
+                        <div class="rating">
+                            <span class="material-icons">star</span>
+                            <span class="material-icons">star</span>
+                            <span class="material-icons">star</span>
+                            <span class="material-icons">star</span>
+                            <span class="material-icons">star</span>
+                        </div>
+                    </div>
+                </div>
+                <p>"Найкращий спортклуб у місті! Особливо подобається басейн та сауна."</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <h3>Вражаючі результати</h3>
+                    <div class="client-info">
+                        <h4>Олег Петренко</h4>
+                        <div class="rating">
+                            <span class="material-icons">star</span>
+                            <span class="material-icons">star</span>
+                            <span class="material-icons">star</span>
+                            <span class="material-icons">star</span>
+                            <span class="material-icons">star_half</span>
+                        </div>
+                    </div>
+                </div>
+                <p>"Відмінні тренери, які знають свою справу. Результат за 3 місяці - мінус 12 кг!"</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="feedback-section">
+    <div class="container">
+        <h3>ПОДІЛИТИСЬ ВРАЖЕННЯМИ</h3>
+        {% if user.is_authenticated %}
+            <button id="openFeedbackModal" class="feedback-button">
+                <span class="material-icons">rate_review</span>
+                ЗАЛИШИТИ ВІДГУК
+            </button>
+        {% else %}
+            <a href="{% url 'accounts:login' %}?next={% url 'home' %}" class="feedback-button">
+                <span class="material-icons">rate_review</span>
+                ЗАЛИШИТИ ВІДГУК
+            </a>
+        {% endif %}
+    </div>
+</section>
+
+<div id="feedbackModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h3>ВАШ ВІДГУК</h3>
+        <form id="feedbackForm">
+            <div class="form-group">
+                <input type="text" placeholder="Заголовок (наприклад: Чудовий досвід)" required>
+            </div>
+            <div class="rating-selector">
+                <span class="material-icons" data-rating="1">star_outline</span>
+                <span class="material-icons" data-rating="2">star_outline</span>
+                <span class="material-icons" data-rating="3">star_outline</span>
+                <span class="material-icons" data-rating="4">star_outline</span>
+                <span class="material-icons" data-rating="5">star_outline</span>
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Ваші враження..." required></textarea>
+            </div>
+            <button type="submit" class="submit-button">НАДІСЛАТИ</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'js/pages/home.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,168 @@
+/* Базові стилі */
+.verify-email-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #f5f7fa;
+    box-sizing: border-box;
+}
+
+.verify-email-container {
+    width: 100%;
+    max-width: 450px;
+    padding: 0 15px;
+}
+
+.verify-email-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Заголовок */
+.verify-email-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.verify-email-header h1 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.verify-email-header p {
+    color: #6c757d;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Форма */
+.verify-email-form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+}
+
+.input-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #718096;
+}
+
+.email-input {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.email-input:focus {
+    outline: none;
+    border-color: #4361ee;
+    box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.2);
+}
+
+/* Кнопка */
+.submit-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4361ee;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+}
+
+.submit-button:hover {
+    background-color: #3a56d4;
+}
+
+/* Повідомлення та помилки */
+.verify-email-messages {
+    margin-bottom: 20px;
+}
+
+.message {
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.message.error {
+    background-color: #fef2f2;
+    color: #dc2626;
+}
+
+.message.success {
+    background-color: #f0fdf4;
+    color: #166534;
+}
+
+.error-message {
+    color: #dc2626;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* Посилання */
+.back-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-link a {
+    color: #4361ee;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+}
+
+/* Адаптація */
+@media (max-width: 480px) {
+    .verify-email-page {
+        padding: 15px;
+    }
+
+    .verify-email-card {
+        padding: 20px;
+    }
+
+    .email-input {
+        padding: 10px 10px 10px 36px;
+    }
+}

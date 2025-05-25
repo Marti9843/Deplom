@@ -1,0 +1,394 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/services/pool.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- Герой секція -->
+<section class="pool-hero">
+    <div class="pool-hero-content">
+        <h1>Басейни СпортЦентру</h1>
+        <p>Сучасні басейни для всіх вікових категорій</p>
+    </div>
+</section>
+
+<!-- Переваги -->
+<section class="pool-benefits">
+    <div class="pool-container">
+        <div class="pool-section-header">
+            <h2>Чому варто обирати наші басейни?</h2>
+            <p class="pool-section-description">Професійний підхід до вашого відпочинку та тренувань</p>
+        </div>
+
+        <div class="pool-benefits-grid">
+            <div class="pool-benefit-card">
+                <span class="material-icons">water</span>
+                <h3>Чиста вода</h3>
+                <p>Система очищення європейського рівня</p>
+            </div>
+            <div class="pool-benefit-card">
+                <span class="material-icons">groups</span>
+                <h3>Досвідчені інструктори</h3>
+                <p>Сертифіковані тренери з досвідом від 5 років</p>
+            </div>
+            <div class="pool-benefit-card">
+                <span class="material-icons">accessibility</span>
+                <h3>Доступність</h3>
+                <p>Спеціальні умови для людей з обмеженими можливостями</p>
+            </div>
+            <div class="pool-benefit-card">
+                <span class="material-icons">child_care</span>
+                <h3>Дитячі програми</h3>
+                <p>Окремий дитячий басейн з підігрівом</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Наші басейни -->
+<section class="pool-types">
+    <div class="pool-container">
+        <div class="pool-section-header">
+            <h2>Наші басейни</h2>
+            <p class="pool-section-description">Оберіть басейн, який вам підходить</p>
+        </div>
+
+        <div class="pool-types-grid">
+            <div class="pool-type-card">
+                <div class="pool-photo-container">
+                    <img src="{% static 'images/services/kids-pool.jpg' %}" alt="Дитячий басейн" class="pool-photo">
+                </div>
+                <div class="pool-card-content">
+                    <h3>Дитячий басейн</h3>
+                    <p class="pool-style">Для дітей від 0 до 14 років</p>
+                    <div class="pool-details">
+                        <p>Безпечний басейн з підігрівом води та спеціальним покриттям. Глибина 0.85м, температура води +32°C. Ідеальне місце для перших кроків у навчанні плаванню.</p>
+                        <p>Розмір: 6×10 м</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pool-type-card">
+                <div class="pool-photo-container">
+                    <img src="{% static 'images/services/sport-pool.jpg' %}" alt="Спортивний басейн" class="pool-photo">
+                </div>
+                <div class="pool-card-content">
+                    <h3>Спортивний басейн</h3>
+                    <p class="pool-style">25-метровий професійний</p>
+                    <div class="pool-details">
+                        <p>8 доріжок для плавання, глибина від 1.8 до 2.9 м. Система протитечії, стартові тумби. Ідеально підходить для тренувань та змагань.</p>
+                        <p>Температура води: +28°C</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Програми для басейну -->
+<section class="pool-programs">
+    <div class="pool-container">
+        <div class="pool-section-header">
+            <h2>Програми для басейну</h2>
+            <p class="pool-section-description">Оберіть програму, яка вам підходить</p>
+        </div>
+
+        <div class="pool-programs-grid">
+            <div class="pool-program-card">
+                <div class="pool-program-photo-container">
+                    <img src="{% static 'images/services/kids-swimming.jpg' %}" alt="Навчання дітей плаванню" class="pool-program-photo">
+                </div>
+                <div class="pool-program-card-content">
+                    <h3>Навчання дітей плаванню</h3>
+                    <p class="pool-program-style">Для дітей 4-12 років</p>
+                    <div class="pool-program-details">
+                        <p>Професійне навчання плаванню для дітей різних вікових груп. Використання ігрових методик, поетапне навчання основним стилям плавання.</p>
+                        <p>Тривалість: 45 хв</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pool-program-card">
+                <div class="pool-program-photo-container">
+                    <img src="{% static 'images/services/aqua-aerobics.jpg' %}" alt="Аквааеробіка" class="pool-program-photo">
+                </div>
+                <div class="pool-program-card-content">
+                    <h3>Аквааеробіка</h3>
+                    <p class="pool-program-style">Для дорослих</p>
+                    <div class="pool-program-details">
+                        <p>Ефективні тренування у воді, що поєднують аеробні вправи з силовими. Ідеально для схуднення, підвищення витривалості та зміцнення м'язів.</p>
+                        <p>Тривалість: 60 хв</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pool-program-card">
+                <div class="pool-program-photo-container">
+                    <img src="{% static 'images/services/pro-swimming.jpg' %}" alt="Спортивне плавання" class="pool-program-photo">
+                </div>
+                <div class="pool-program-card-content">
+                    <h3>Спортивне плавання</h3>
+                    <p class="pool-program-style">Для дорослих та підлітків</p>
+                    <div class="pool-program-details">
+                        <p>Тренування з вивчення техніки всіх спортивних стилів плавання. Підвищення швидкості та витривалості. Індивідуальний підхід до кожного.</p>
+                        <p>Тривалість: 60-90 хв</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pool-program-card">
+                <div class="pool-program-photo-container">
+                    <img src="{% static 'images/services/baby-swim.jpg' %}" alt="Раннє плавання" class="pool-program-photo">
+                </div>
+                <div class="pool-program-card-content">
+                    <h3>Раннє плавання</h3>
+                    <p class="pool-program-style">Для немовлят 0-3 роки</p>
+                    <div class="pool-program-details">
+                        <p>Спеціальні заняття для найменших разом з батьками. Сприяє фізичному розвитку, зміцненню імунітету та адаптації до водного середовища.</p>
+                        <p>Тривалість: 30 хв</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pool-program-card">
+                <div class="pool-program-photo-container">
+                    <img src="{% static 'images/services/aqua-yoga.jpg' %}" alt="Аква-йога" class="pool-program-photo">
+                </div>
+                <div class="pool-program-card-content">
+                    <h3>Аква-йога</h3>
+                    <p class="pool-program-style">Для всіх вікових груп</p>
+                    <div class="pool-program-details">
+                        <p>Поєднання класичних асан йоги з особливостями води. Розслабляє, зміцнює м'язи, покращує гнучкість та баланс. Ідеально для реабілітації.</p>
+                        <p>Тривалість: 60 хв</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Розклад -->
+<section class="pool-schedule">
+    <div class="container">
+        <div class="section-header">
+            <h2>Розклад занять</h2>
+            <p class="section-description">Оберіть зручний для вас час</p>
+        </div>
+
+        <div class="schedule-tabs">
+            <div class="tab active" data-day="monday">Понеділок</div>
+            <div class="tab" data-day="tuesday">Вівторок</div>
+            <div class="tab" data-day="wednesday">Середа</div>
+            <div class="tab" data-day="thursday">Четвер</div>
+            <div class="tab" data-day="friday">П'ятниця</div>
+            <div class="tab" data-day="saturday">Субота</div>
+        </div>
+
+        <!-- Понеділок -->
+        <div class="schedule-content active" id="monday">
+            <div class="schedule-item">
+                <div class="time">08:00 - 08:45</div>
+                <div class="class-info">
+                    <h4>Навчання дітей плаванню</h4>
+                    <p>Левицький Вадим</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+            <div class="schedule-item">
+                <div class="time">18:30 - 19:15</div>
+                <div class="class-info">
+                    <h4>Навчання дітей плаванню</h4>
+                    <p>Левицький Вадим</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+        </div>
+
+        <!-- Вівторок -->
+        <div class="schedule-content" id="tuesday">
+            <div class="schedule-item">
+                <div class="time">08:00 - 09:00</div>
+                <div class="class-info">
+                    <h4>Аквааеробіка</h4>
+                    <p>Левицький Вадим</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+            <div class="schedule-item">
+                <div class="time">18:30 - 19:30</div>
+                <div class="class-info">
+                    <h4>Аквааеробіка</h4>
+                    <p>Левицький Вадим</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+        </div>
+
+        <!-- Середа -->
+        <div class="schedule-content" id="wednesday">
+            <div class="schedule-item">
+                <div class="time">08:00 - 09:00</div>
+                <div class="class-info">
+                    <h4>Спортивне плавання</h4>
+                    <p>Левицький Вадим</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+            <div class="schedule-item">
+                <div class="time">18:30 - 20:00</div>
+                <div class="class-info">
+                    <h4>Спортивне плавання</h4>
+                    <p>Левицький Вадим</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+        </div>
+
+        <!-- Четвер -->
+        <div class="schedule-content" id="thursday">
+            <div class="schedule-item">
+                <div class="time">08:00 - 08:30</div>
+                <div class="class-info">
+                    <h4>Раннє плавання</h4>
+                    <p>Левицький Вадим</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+            <div class="schedule-item">
+                <div class="time">18:30 - 19:00</div>
+                <div class="class-info">
+                    <h4>Раннє плавання</h4>
+                    <p>Левицький Вадим</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+        </div>
+
+        <!-- П'ятниця -->
+        <div class="schedule-content" id="friday">
+            <div class="schedule-item">
+                <div class="time">08:00 - 09:00</div>
+                <div class="class-info">
+                    <h4>Аква-йога</h4>
+                    <p>Левицький Вадим</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+            <div class="schedule-item">
+                <div class="time">18:30 - 19:30</div>
+                <div class="class-info">
+                    <h4>Аква-йога</h4>
+                    <p>Левицький Вадим</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+        </div>
+
+        <!-- Субота -->
+        <div class="schedule-content" id="saturday">
+            <div class="schedule-item">
+                <div class="time">09:00 - 09:45</div>
+                <div class="class-info">
+                    <h4>Навчання дітей плаванню</h4>
+                    <p>Левицький Вадим</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+            <div class="schedule-item">
+                <div class="time">10:30 - 11:30</div>
+                <div class="class-info">
+                    <h4>Аквааеробіка</h4>
+                    <p>Левицький Вадим</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+            <div class="schedule-item">
+                <div class="time">12:00 - 13:30</div>
+                <div class="class-info">
+                    <h4>Спортивне плавання</h4>
+                    <p>Левицький Вадим</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+            <div class="schedule-item">
+                <div class="time">17:00 - 17:30</div>
+                <div class="class-info">
+                    <h4>Раннє плавання</h4>
+                    <p>Левицький Вадим</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+            <div class="schedule-item">
+                <div class="time">18:30 - 19:30</div>
+                <div class="class-info">
+                    <h4>Аква-йога</h4>
+                    <p>Левицький Вадим</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Вартість -->
+<section class="pool-pricing-section">
+    <div class="pool-container">
+        <div class="pool-section-header">
+            <h2>Вартість відвідування</h2>
+            <p class="pool-section-description">Оберіть оптимальний варіант</p>
+        </div>
+
+        <div class="pool-pricing-options">
+            <div class="pool-pricing-category">
+                <div class="pool-pricing-header">
+                    <h3>Разові відвідування</h3>
+                </div>
+                <div class="pool-pricing-grid">
+                    <div class="pool-price-item">
+                        <div class="pool-price-label">Дорослі</div>
+                        <div class="pool-price-value">250 грн</div>
+                    </div>
+                    <div class="pool-price-item">
+                        <div class="pool-price-label">Діти (7-14 років)</div>
+                        <div class="pool-price-value">150 грн</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pool-pricing-category">
+                <div class="pool-pricing-header">
+                    <h3>Абонементи (1 місяць)</h3>
+                </div>
+                <div class="pool-pricing-grid">
+                    <div class="pool-price-item">
+                        <div class="pool-price-label">8 відвідувань</div>
+                        <div class="pool-price-value">1100 грн</div>
+                    </div>
+                    <div class="pool-price-item">
+                        <div class="pool-price-label">Безліміт</div>
+                        <div class="pool-price-value">2500 грн</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Вимоги -->
+<section class="yoga-requirements">
+    <div class="container">
+        <div class="requirements-container">
+            <h3 class="requirements-title">Важлива інформація</h3>
+            <ul class="requirements-list">
+                <li>Обов'язкова медична довідка</li>
+                <li>Купальна шапочка для дорослих</li>
+                <li>Діти до 7 років - тільки з дорослими</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<script src="{% static 'js/services/pool.js' %}"></script>
+{% endblock %}

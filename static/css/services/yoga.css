@@ -1,0 +1,646 @@
+/* ========== Глобальні стилі ========== */
+:root {
+    --primary-blue: #4361ee;
+    --primary-hover: #3a56d4;
+    --dark-bg: #1a1a2e;
+    --light-text: #f8f9fa;
+    --card-bg: #ffffff;
+    --text-color: #2c3e50;
+    --text-secondary: #6c757d;
+    --section-gap: 80px;
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --radius-lg: 12px;
+    --radius-md: 8px;
+    --radius-sm: 4px;
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* ========== Герой секція ========== */
+.yoga-hero {
+    background: linear-gradient(rgba(67, 97, 238, 0.85), rgba(67, 97, 238, 0.85)),
+                url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    color: var(--light-text);
+    height: 50vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: var(--section-gap);
+}
+
+.yoga-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.yoga-hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.yoga-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: white;
+    color: var(--primary-blue);
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+    font-size: 1rem;
+    border: 2px solid white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.cta-button:hover {
+    background-color: transparent;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* ========== Базові стилі ========== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.section-description {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ========== Секція переваг ========== */
+.yoga-benefits {
+    padding: var(--section-gap) 0;
+    background-color: white;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.benefit-card {
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    padding: 35px 25px;
+    text-align: center;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.benefit-card .material-icons {
+    font-size: 48px;
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+}
+
+.benefit-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.benefit-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* ========== Секція напрямків ========== */
+.yoga-directions {
+    padding: var(--section-gap) 0;
+    background-color: #f8f9fa;
+}
+
+.yoga-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.yoga-card {
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.yoga-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.yoga-photo-container {
+    height: 250px;
+    overflow: hidden;
+}
+
+.yoga-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.yoga-card:hover .yoga-photo {
+    transform: scale(1.05);
+}
+
+.yoga-card-content {
+    padding: 25px;
+}
+
+.yoga-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.yoga-style {
+    color: var(--primary-blue);
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    display: block;
+}
+
+.yoga-details p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+}
+
+.yoga-details .material-icons {
+    font-size: 18px;
+    margin-right: 8px;
+    color: var(--primary-blue);
+}
+
+/* ========== Секція розкладу ========== */
+.yoga-schedule {
+    padding: var(--section-gap) 0;
+    background-color: white;
+}
+
+.schedule-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tab {
+    padding: 8px 18px;
+    background: #f1f3f5;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 500;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.tab.active {
+    background: var(--primary-blue);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.tab:hover {
+    background: #e1e5e9;
+}
+
+.schedule-content {
+    display: none;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.schedule-content.active {
+    display: block;
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.schedule-item {
+    display: flex;
+    align-items: center;
+    background: var(--card-bg);
+    border-radius: var(--radius-md);
+    padding: 18px 25px;
+    margin-bottom: 12px;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+}
+
+.schedule-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.time {
+    width: 100px;
+    font-weight: 500;
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+.class-info {
+    flex-grow: 1;
+    padding: 0 15px;
+}
+
+.class-info h4 {
+    margin: 0 0 4px 0;
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+.class-info p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.signup-btn {
+    background: var(--primary-blue);
+    color: white;
+    padding: 8px 20px;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    font-size: 0.9rem;
+}
+
+.signup-btn:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+/* ========== Секція вартості ========== */
+.yoga-pricing {
+    padding: var(--section-gap) 0;
+    background-color: #f8f9fa;
+}
+
+.pricing-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.pricing-category {
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    padding: 30px;
+    box-shadow: var(--card-shadow);
+}
+
+.pricing-header {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f4ff;
+}
+
+.pricing-header h3 {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin: 0;
+    text-align: center;
+}
+
+.pricing-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.price-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    border-radius: var(--radius-md);
+    background-color: #f5f7ff;
+    transition: var(--transition);
+}
+
+.price-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(67, 97, 238, 0.1);
+}
+
+.price-label {
+    color: var(--text-color);
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.price-value {
+    color: var(--primary-blue);
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+/* ========== Секція важливої інформації ========== */
+.yoga-requirements {
+    padding: 60px 0;
+    background-color: white;
+}
+
+.requirements-container {
+    max-width: 800px;
+    margin: 0;
+    padding-left: 20px;
+}
+
+.requirements-title {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 25px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.requirements-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.requirements-list li {
+    position: relative;
+    margin-bottom: 15px;
+    color: var(--text-color);
+    line-height: 1.6;
+    padding-left: 25px; /* Збільшуємо відступ для тексту */
+    text-align: left;
+}
+
+.requirements-list li:before {
+    content: "•";
+    color: var(--primary-blue);
+    font-size: 1.2rem; /* Зменшуємо розмір крапки */
+    position: absolute;
+    left: 5px; /* Зміщуємо крапку праворуч */
+    top: 50%;
+    transform: translateY(-50%); /* Центруємо вертикально */
+}
+
+
+/* ========== Адаптивність ========== */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 1024px) {
+    :root {
+        --section-gap: 70px;
+    }
+
+    .yoga-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .pricing-options {
+        gap: 20px;
+    }
+
+    .pricing-category {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 900px) {
+    .yoga-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --section-gap: 60px;
+    }
+
+    .yoga-hero {
+        height: 55vh;
+        min-height: 400px;
+    }
+
+    .yoga-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .yoga-hero p {
+        font-size: 1.1rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .section-description {
+        font-size: 1rem;
+    }
+
+    /* Розклад */
+    .schedule-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .time {
+        width: auto;
+    }
+
+    .class-info {
+        padding: 0;
+    }
+
+    .signup-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Вартість */
+    .pricing-options {
+        grid-template-columns: 1fr;
+    }
+
+    /* Напрямки */
+    .yoga-photo-container {
+        height: 220px;
+    }
+}
+
+@media (max-width: 650px) {
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --section-gap: 50px;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    .yoga-hero {
+        height: 50vh;
+        min-height: 350px;
+    }
+
+    .yoga-hero h1 {
+        font-size: 2rem;
+    }
+
+    .yoga-hero p {
+        font-size: 1rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.7rem;
+        margin-bottom: 10px;
+    }
+
+    /* Переваги */
+    .benefits-grid,
+    .yoga-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefit-card {
+        padding: 30px 20px;
+    }
+
+    /* Розклад */
+    .tab {
+        padding: 6px 14px;
+        font-size: 0.9rem;
+    }
+
+    .schedule-item {
+        padding: 15px;
+    }
+
+    /* Вартість */
+    .price-item {
+        padding: 12px;
+    }
+
+    .price-label {
+        font-size: 1rem;
+    }
+
+    .price-value {
+        font-size: 1.2rem;
+    }
+
+    /* Важлива інформація */
+    .requirements-title {
+        font-size: 1.3rem;
+    }
+
+    .requirements-list li {
+        padding-left: 25px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .yoga-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .cta-button {
+        padding: 10px 25px;
+        font-size: 0.95rem;
+    }
+
+    .pricing-header h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .tab {
+        padding: 5px 10px;
+        font-size: 0.85rem;
+    }
+
+    .price-label,
+    .price-value {
+        font-size: 0.95rem;
+    }
+}

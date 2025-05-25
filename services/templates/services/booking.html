@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="booking-container">
+    <h1>Запис на послуги</h1>
+    <div class="booking-form">
+        <form method="post">
+            {% csrf_token %}
+            <!-- Тут буде форма запису -->
+            <button type="submit" class="btn btn-primary">Записатися</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

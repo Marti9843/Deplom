@@ -1,0 +1,412 @@
+:root {
+    --primary-blue: #4361ee;
+    --primary-hover: #3a56d4;
+    --dark-bg: #1a1a2e;
+    --light-text: #f8f9fa;
+    --card-bg: #ffffff;
+    --text-color: #2c3e50;
+    --text-secondary: #6c757d;
+    --section-gap: 80px;
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --radius-lg: 12px;
+    --radius-md: 8px;
+    --radius-sm: 4px;
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Базові стилі */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.section-description {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Герой секція */
+.massage-hero {
+    background: linear-gradient(rgba(67, 97, 238, 0.85), rgba(67, 97, 238, 0.85)),
+                url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    color: var(--light-text);
+    height: 50vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: var(--section-gap);
+}
+
+.massage-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.massage-hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.massage-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Секція переваг */
+.massage-benefits {
+    padding: var(--section-gap) 0;
+    background-color: white;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.benefit-card {
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    padding: 35px 25px;
+    text-align: center;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.benefit-icon {
+    width: 80px;
+    height: 80px;
+    background-color: #f0f4ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+}
+
+.benefit-icon .material-icons {
+    font-size: 40px;
+    color: var(--primary-blue);
+}
+
+.benefit-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.benefit-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Секція видів масажу */
+.massage-types {
+    padding: var(--section-gap) 0;
+    background-color: #f8f9fa;
+}
+
+.types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.type-card {
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.type-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.type-photo-container {
+    height: 250px;
+    overflow: hidden;
+}
+
+.type-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.type-card:hover .type-photo {
+    transform: scale(1.05);
+}
+
+.type-card-content {
+    padding: 25px;
+}
+
+.type-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.type-style {
+    color: var(--primary-blue);
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    display: block;
+}
+
+.type-details p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+}
+
+.type-details .material-icons {
+    font-size: 18px;
+    margin-right: 8px;
+    color: var(--primary-blue);
+}
+
+/* Секція вартості */
+.massage-pricing {
+    padding: var(--section-gap) 0;
+    background-color: #f8f9fa;
+}
+
+.pricing-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.pricing-category {
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    padding: 30px;
+    box-shadow: var(--card-shadow);
+}
+
+.pricing-header {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f4ff;
+}
+
+.pricing-header h3 {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin: 0;
+    text-align: center;
+}
+
+.pricing-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.price-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    border-radius: var(--radius-md);
+    background-color: #f5f7ff;
+    transition: var(--transition);
+}
+
+.price-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(67, 97, 238, 0.1);
+}
+
+.price-label {
+    color: var(--text-color);
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.price-value {
+    color: var(--primary-blue);
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+/* Секція важливої інформації */
+.massage-requirements {
+    padding: var(--section-gap) 0;
+    background-color: white;
+}
+
+.requirements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.requirement-card {
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    padding: 30px;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+    text-align: left;
+}
+
+.requirement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.requirement-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #f0f4ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.requirement-icon .material-icons {
+    font-size: 30px;
+    color: var(--primary-blue);
+}
+
+.requirement-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.requirement-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.requirement-card li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.requirement-card li:before {
+    content: "•";
+    color: var(--primary-blue);
+    font-size: 1.2rem;
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Адаптивність */
+@media (max-width: 1024px) {
+    .pricing-options {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --section-gap: 60px;
+    }
+
+    .massage-hero {
+        height: 40vh;
+        min-height: 350px;
+    }
+
+    .massage-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .massage-hero p {
+        font-size: 1.1rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .section-description {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .massage-hero h1 {
+        font-size: 2rem;
+    }
+
+    .benefits-grid,
+    .types-grid,
+    .requirements-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .requirement-card {
+        padding: 25px 20px;
+    }
+}

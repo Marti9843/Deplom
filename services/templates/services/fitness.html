@@ -1,0 +1,412 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/services/fitness.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- Герой секція -->
+<section class="fitness-hero">
+    <div class="fitness-hero-content">
+        <h1>Фітнес у СпортЦентрі</h1>
+        <p>Досягайте своїх цілей разом з нами</p>
+    </div>
+</section>
+
+<!-- Переваги -->
+<section class="fitness-benefits">
+    <div class="container">
+        <div class="section-header">
+            <h2>Чому варто обирати наш фітнес?</h2>
+            <p class="section-description">Професійний підхід до вашого тренувального процесу</p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <span class="material-icons">fitness_center</span>
+                <h3>Сучасне обладнання</h3>
+                <p>Тренажери преміум-класу від провідних виробників</p>
+            </div>
+            <div class="benefit-card">
+                <span class="material-icons">groups</span>
+                <h3>Професійні тренери</h3>
+                <p>Сертифіковані спеціалісти з досвідом від 5 років</p>
+            </div>
+            <div class="benefit-card">
+                <span class="material-icons">monitor_heart</span>
+                <h3>Індивідуальний підхід</h3>
+                <p>Персональні програми тренувань під ваші цілі</p>
+            </div>
+            <div class="benefit-card">
+                <span class="material-icons">spa</span>
+                <h3>Комфорт</h3>
+                <p>Сучасні роздягальні, душові та зона відпочинку</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Програми -->
+<section class="fitness-programs">
+    <div class="container">
+        <div class="section-header">
+            <h2>Фітнес програми</h2>
+            <p class="section-description">Оберіть програму, яка вам підходить</p>
+        </div>
+
+        <div class="programs-grid">
+            <div class="program-card">
+                <div class="program-photo-container">
+                    <img src="{% static 'images/services/bodypump.jpg' %}" alt="Body Pump" class="program-photo">
+                </div>
+                <div class="program-card-content">
+                    <h3>Body Pump</h3>
+                    <p class="program-style">Інтенсивне жироспалювальне тренування</p>
+                    <div class="program-details">
+                        <p>Програма зі штангою, за допомогою якої ви зможете спалити жир,
+                            зміцнити м’язи та якісно змінити своє тіло.
+                            Тренування низькоударне (без стрибків і бігу),
+                            підходить навіть новачкам (мінімальна вага штанги)
+                            та однаково ефективне як для чоловіків, так і для жінок.</p>
+                        <p>Тривалість: 60 хв</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="program-card">
+                <div class="program-photo-container">
+                    <img src="{% static 'images/services/zumba.jpg' %}" alt="Zumba" class="program-photo">
+                </div>
+                <div class="program-card-content">
+                    <h3>Zumba</h3>
+                    <p class="program-style">Танцювальні тренування</p>
+                    <div class="program-details">
+                        <p>Фітнес-програма, що складається з танцювальних рухів під латиноамериканські ритми.
+                            Цей напрям фітнесу більше підходить людям, які люблять танці,
+                            відчувають ритм і надають перевагу активним тренуванням.</p>
+                        <p>Тривалість: 60-90 хв</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="program-card">
+                <div class="program-photo-container">
+                    <img src="{% static 'images/services/strongnation.jpg' %}" alt="Strong NATION" class="program-photo">
+                </div>
+                <div class="program-card-content">
+                    <h3>Strong NATION</h3>
+                    <p class="program-style">Інтенсивні тренування</p>
+                    <div class="program-details">
+                        <p>Ефективне функціональне тренування,
+                            у якому поєднуються принципи високої інтенсивності (HIIT)
+                            та вправи з вагою власного тіла під ритмічну, спеціально створену музику.
+                            Підходить для всіх, незалежно від віку та рівня фізичної підготовки.</p>
+                        <p>Тривалість: 60 хв</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="program-card">
+                <div class="program-photo-container">
+                    <img src="{% static 'images/services/tabata.jpg' %}" alt="Табата" class="program-photo">
+                </div>
+                <div class="program-card-content">
+                    <h3>Табата</h3>
+                    <p class="program-style">Інтенсивні тренування</p>
+                    <div class="program-details">
+                        <p>Цикл вправ, спрямованих на максимально ефективні та корисні інтервальні тренування.
+                            Передбачає інтенсивні навантаження у стислі проміжки часу.
+                            Інтервали: 30 секунд роботи / 10 секунд відпочинку.</p>
+                        <p>Тривалість: 60 хв</p>
+                    </div>
+                </div>
+            </div>
+            <div class="program-card">
+                <div class="program-photo-container">
+                    <img src="{% static 'images/services/mfr.jpg' %}" alt="МФР або міофасціальний реліз" class="program-photo">
+                </div>
+                <div class="program-card-content">
+                    <h3>МФР або міофасціальний реліз</h3>
+                    <p class="program-style">Тілесна терапія</p>
+                    <div class="program-details">
+                        <p>Мануальна терапія, що використовується у фітнесі для розслаблення м’язів і
+                            фасцій шляхом натискання та розтягування тканин у поєднанні з правильним диханням.
+                            У результаті покращується кровообіг і лімфотік,
+                            збільшується діапазон рухів у суглобі або групі суглобів,
+                            зникає біль і з’являється відчуття легкості.</p>
+                        <p>Тривалість: 60-90 хв</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Розклад -->
+<section class="fitness-schedule">
+    <div class="container">
+        <div class="section-header">
+            <h2>Розклад занять</h2>
+            <p class="section-description">Оберіть зручний для вас час</p>
+        </div>
+
+        <div class="schedule-tabs">
+            <div class="tab active" data-day="monday">Понеділок</div>
+            <div class="tab" data-day="tuesday">Вівторок</div>
+            <div class="tab" data-day="wednesday">Середа</div>
+            <div class="tab" data-day="thursday">Четвер</div>
+            <div class="tab" data-day="friday">П'ятниця</div>
+            <div class="tab" data-day="saturday">Субота</div>
+        </div>
+
+        <!-- Понеділок -->
+        <div class="schedule-content active" id="monday">
+            <div class="schedule-item">
+                <div class="time">08:00 - 09:00</div>
+                <div class="class-info">
+                    <h4>Body Pump</h4>
+                    <p>Олена Ковальчук</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+            <div class="schedule-item">
+                <div class="time">18:30 - 19:30</div>
+                <div class="class-info">
+                    <h4>Body Pump</h4>
+                    <p>Олена Ковальчук</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+        </div>
+
+        <!-- Вівторок -->
+        <div class="schedule-content" id="tuesday">
+            <div class="schedule-item">
+                <div class="time">08:00 - 09:00</div>
+                <div class="class-info">
+                    <h4>Zumba</h4>
+                    <p>Олена Ковальчук</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+            <div class="schedule-item">
+                <div class="time">18:30 - 20:00</div>
+                <div class="class-info">
+                    <h4>Zumba</h4>
+                    <p>Олена Ковальчук</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+        </div>
+
+        <!-- Середа -->
+        <div class="schedule-content" id="wednesday">
+            <div class="schedule-item">
+                <div class="time">08:00 - 09:00</div>
+                <div class="class-info">
+                    <h4>Strong NATION</h4>
+                    <p>Олена Ковальчук</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+            <div class="schedule-item">
+                <div class="time">18:30 - 19:30</div>
+                <div class="class-info">
+                    <h4>Strong NATION</h4>
+                    <p>Олена Ковальчук</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+        </div>
+
+        <!-- Четвер -->
+        <div class="schedule-content" id="thursday">
+            <div class="schedule-item">
+                <div class="time">08:00 - 09:00</div>
+                <div class="class-info">
+                    <h4>Табата</h4>
+                    <p>Олена Ковальчук</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+            <div class="schedule-item">
+                <div class="time">18:30 - 19:30</div>
+                <div class="class-info">
+                    <h4>Табата</h4>
+                    <p>Олена Ковальчук</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+        </div>
+
+        <!-- П'ятниця -->
+        <div class="schedule-content" id="friday">
+            <div class="schedule-item">
+                <div class="time">08:00 - 09:00</div>
+                <div class="class-info">
+                    <h4>МФР або міофасціальний реліз</h4>
+                    <p>Олена Ковальчук</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+            <div class="schedule-item">
+                <div class="time">18:30 - 20:00</div>
+                <div class="class-info">
+                    <h4>МФР або міофасціальний реліз</h4>
+                    <p>Олена Ковальчук</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+        </div>
+
+        <!-- Субота -->
+        <div class="schedule-content" id="saturday">
+            <div class="schedule-item">
+                <div class="time">09:00 - 10:00</div>
+                <div class="class-info">
+                    <h4>Body Pump</h4>
+                    <p>Олена Ковальчук</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+            <div class="schedule-item">
+                <div class="time">10:30 - 11:30</div>
+                <div class="class-info">
+                    <h4>Zumba</h4>
+                    <p>Олена Ковальчук</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+            <div class="schedule-item">
+                <div class="time">12:00 - 13:00</div>
+                <div class="class-info">
+                    <h4>Strong NATION</h4>
+                    <p>Олена Ковальчук</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+            <div class="schedule-item">
+                <div class="time">17:00 - 18:00</div>
+                <div class="class-info">
+                    <h4>Табата</h4>
+                    <p>Олена Ковальчук</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+            <div class="schedule-item">
+                <div class="time">18:30 - 19:30</div>
+                <div class="class-info">
+                    <h4>МФР або міофасціальний реліз</h4>
+                    <p>Олена Ковальчук</p>
+                </div>
+                <a href="#" class="signup-btn">Записатися</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Вартість -->
+<section class="fitness-pricing">
+    <div class="container">
+        <div class="section-header">
+            <h2>Вартість занять</h2>
+            <p class="section-description">Оберіть оптимальний варіант</p>
+        </div>
+
+        <div class="pricing-options">
+            <!-- Разові заняття -->
+            <div class="pricing-category">
+                <div class="pricing-header">
+                    <h3>Разові заняття</h3>
+                </div>
+                <div class="pricing-grid">
+                    <div class="price-item">
+                        <div class="price-label">Дорослі</div>
+                        <div class="price-value">200 грн</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-label">Студенти</div>
+                        <div class="price-value">150 грн</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-label">Пенсіонери</div>
+                        <div class="price-value">120 грн</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-label">Люди з обмеженими можливостями</div>
+                        <div class="price-value">120 грн</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Абонементи -->
+            <div class="pricing-category">
+                <div class="pricing-header">
+                    <h3>Абонементи (1 місяць)</h3>
+                </div>
+                <div class="pricing-grid">
+                    <div class="price-item">
+                        <div class="price-label">8 занять</div>
+                        <div class="price-value">1000 грн</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-label">12 занять</div>
+                        <div class="price-value">1350 грн</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-label">Безліміт</div>
+                        <div class="price-value">1800 грн</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Персональні тренування -->
+            <div class="pricing-category">
+                <div class="pricing-header">
+                    <h3>Персональні тренування</h3>
+                </div>
+                <div class="pricing-grid">
+                    <div class="price-item">
+                        <div class="price-label">1 тренування</div>
+                        <div class="price-value">250-350 грн</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-label">8 тренувань</div>
+                        <div class="price-value">1700-2400 грн</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-label">12 тренувань</div>
+                        <div class="price-value">2300-3200 грн</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-label">Індивідуальна програма</div>
+                        <div class="price-value">500 грн</div>
+                    </div>
+                </div>
+                <div class="pricing-note">
+                    <p>* Вартість залежить від категорії тренера</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Вимоги -->
+<section class="fitness-requirements">
+    <div class="container">
+        <div class="requirements-container">
+            <h3 class="requirements-title">Важлива інформація</h3>
+            <ul class="requirements-list">
+                <li>Абонементи дійсні 30 днів з моменту активації</li>
+                <li>Заняття не переносяться на наступний місяць</li>
+                <li>При собі необхідно мати рушник та спортзалний одяг</li>
+                <li>Перше заняття з тренером - обов'язкове для новачків</li>
+                <li>Усі заняття проводяться за попереднім записом</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<script src="{% static 'js/services/fitness.js' %}"></script>
+{% endblock %}

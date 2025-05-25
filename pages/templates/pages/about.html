@@ -1,0 +1,175 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/pages/about.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="about-hero">
+    <div class="about-hero-container">
+        <div class="about-hero-content">
+            <h1>Про наш СпортЦентр</h1>
+            <p class="hero-subtitle">Ваш надійний партнер у світі здорового способу життя з 2015 року</p>
+        </div>
+    </div>
+</section>
+
+<!-- Mission Section -->
+<section class="about-section about-mission">
+    <div class="container">
+        <div class="section-header">
+            <h2>Наша місія</h2>
+            <p class="section-description">Ми створюємо інклюзивний простір для всіх, незалежно від віку та рівня підготовки</p>
+        </div>
+
+        <div class="mission-features">
+            <div class="feature-item">
+                <span class="material-icons">sports</span>
+                <h3>Доступність</h3>
+                <p>Сучасне обладнання для будь-якого рівня підготовки</p>
+            </div>
+            <div class="feature-item">
+                <span class="material-icons">groups</span>
+                <h3>Професіоналізм</h3>
+                <p>Тренери з досвідом роботи від 5 років</p>
+            </div>
+            <div class="feature-item">
+                <span class="material-icons">health_and_safety</span>
+                <h3>Безпека</h3>
+                <p>Сертифіковані програми та індивідуальний підхід</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section class="about-section about-team">
+    <div class="container">
+        <div class="section-header">
+            <h2>Наша команда</h2>
+            <p class="section-description">Професіонали, які допоможуть досягти ваших цілей</p>
+        </div>
+
+        <div class="team-grid">
+            <!-- Фітнес-тренер -->
+            <div class="team-card">
+                <div class="team-photo-container">
+                    <img src="{% static 'images/team/fitness.jpg' %}" alt="Ковальчук Олена" class="team-photo">
+                </div>
+                <div class="team-card-content">
+                    <h3>Ковальчук Олена</h3>
+                    <p class="team-position">Фітнес-тренер</p>
+                    <div class="team-bio">
+                        <p>Сертифікований тренер з фітнесу</p>
+                        <p>Досвід роботи: 8 років</p>
+                        <p>Спеціалізація: силові тренування, корекція фігури</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Тренер з плавання -->
+            <div class="team-card">
+                <div class="team-photo-container">
+                    <img src="{% static 'images/team/swim.jpg' %}" alt="Левицький Вадим" class="team-photo">
+                </div>
+                <div class="team-card-content">
+                    <h3>Левицький Вадим</h3>
+                    <p class="team-position">Інструктор з плавання</p>
+                    <div class="team-bio">
+                        <p>Майстер спорту з плавання</p>
+                        <p>Досвід роботи: 6 років</p>
+                        <p>Навчає дорослих та дітей від 4 років</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Інструктор з йоги -->
+            <div class="team-card">
+                <div class="team-photo-container">
+                    <img src="{% static 'images/team/yoga.jpg' %}" alt="Шевченко Андрій" class="team-photo">
+                </div>
+                <div class="team-card-content">
+                    <h3>Шевченко Андрій</h3>
+                    <p class="team-position">Інструктор з йоги</p>
+                    <div class="team-bio">
+                        <p>Сертифікований інструктор з хатха-йоги</p>
+                        <p>Досвід роботи: 5 років</p>
+                        <p>Проводить заняття для різних рівнів підготовки</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Масажист -->
+            <div class="team-card">
+                <div class="team-photo-container">
+                    <img src="{% static 'images/team/massage.jpg' %}" alt="Петренко Марія" class="team-photo">
+                </div>
+                <div class="team-card-content">
+                    <h3>Петренко Марія</h3>
+                    <p class="team-position">Масажист</p>
+                    <div class="team-bio">
+                        <p>Спеціаліст з лікувального масажу</p>
+                        <p>Досвід роботи: 7 років</p>
+                        <p>Працює з професійними атлетами</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contacts Section -->
+<section class="about-section about-contacts">
+    <div class="container">
+        <div class="section-header">
+            <h2>Наші контакти</h2>
+            <p class="section-description">Зв'яжіться з нами зручним для вас способом</p>
+        </div>
+
+        <div class="contacts-container">
+            <div class="contacts-info">
+                <div class="contact-item">
+                    <span class="material-icons contact-icon">place</span>
+                    <div class="contact-text">
+                        <h4>Адреса</h4>
+                        <p>м. Івано-Франківськ, вул. Спортивна, 15</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <span class="material-icons contact-icon">call</span>
+                    <div class="contact-text">
+                        <h4>Телефон</h4>
+                        <p><a href="tel:+380991234567">+38 (099) 123-45-67</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <span class="material-icons contact-icon">email</span>
+                    <div class="contact-text">
+                        <h4>Пошта</h4>
+                        <p><a href="mailto:info@sportcenter.if.ua">info@sportcenter.if.ua</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <span class="material-icons contact-icon">schedule</span>
+                    <div class="contact-text">
+                        <h4>Графік роботи</h4>
+                        <p>Пн-Пт: 8:00 - 22:00</p>
+                        <p>Сб-Нд: 9:00 - 20:00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contacts-map">
+                <iframe src="https://maps.google.com/maps?q=Івано-Франківськ&output=embed"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

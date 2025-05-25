@@ -1,0 +1,239 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/services/massage.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="massage-hero">
+    <div class="massage-hero-content">
+        <h1>Масажні послуги</h1>
+        <p>Відновлення тіла та розслаблення розуму</p>
+    </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="massage-benefits">
+    <div class="container">
+        <div class="section-header">
+            <h2>Чому варто обрати наш масаж?</h2>
+            <p class="section-description">Професійний підхід для вашого комфорту</p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <span class="material-icons">medical_services</span>
+                </div>
+                <h3>Професіонали</h3>
+                <p>Масажисти з медичною освітою та досвідом від 5 років</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <span class="material-icons">spa</span>
+                </div>
+                <h3>Релаксація</h3>
+                <p>Повне зняття напруги м'язів та стресу</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <span class="material-icons">eco</span>
+                </div>
+                <h3>Натуральні олії</h3>
+                <p>Використовуємо преміум олії для масажу</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <span class="material-icons">health_and_safety</span>
+                </div>
+                <h3>Індивідуальний підхід</h3>
+                <p>Програма підбирається під ваші потреби</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Types Section -->
+<section class="massage-types">
+    <div class="container">
+        <div class="section-header">
+            <h2>Види масажу</h2>
+            <p class="section-description">Оберіть ідеальний варіант для себе</p>
+        </div>
+
+        <div class="types-grid">
+            <!-- Класичний масаж -->
+            <div class="type-card">
+                <div class="type-photo-container">
+                    <img src="{% static 'images/services/classic-massage.jpg' %}" alt="Класичний масаж" class="type-photo">
+                </div>
+                <div class="type-card-content">
+                    <h3>Класичний масаж</h3>
+                    <p class="type-style">Відновлювальний</p>
+                    <div class="type-details">
+                        <p><span class="material-icons">schedule</span> 60/90 хв</p>
+                        <p><span class="material-icons">scatter_plot</span> Всього тіла</p>
+                        <p><span class="material-icons">star</span> Для розслаблення</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Лікувальний масаж -->
+            <div class="type-card">
+                <div class="type-photo-container">
+                    <img src="{% static 'images/services/medical-massage.jpg' %}" alt="Лікувальний масаж" class="type-photo">
+                </div>
+                <div class="type-card-content">
+                    <h3>Лікувальний масаж</h3>
+                    <p class="type-style">Терапевтичний</p>
+                    <div class="type-details">
+                        <p><span class="material-icons">schedule</span> 60 хв</p>
+                        <p><span class="material-icons">scatter_plot</span> Проблемні зони</p>
+                        <p><span class="material-icons">star</span> При болях у спині</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Антицелюлітний масаж -->
+            <div class="type-card">
+                <div class="type-photo-container">
+                    <img src="{% static 'images/services/anticellulite.jpg' %}" alt="Антицелюлітний масаж" class="type-photo">
+                </div>
+                <div class="type-card-content">
+                    <h3>Антицелюлітний масаж</h3>
+                    <p class="type-style">Корегуючий</p>
+                    <div class="type-details">
+                        <p><span class="material-icons">schedule</span> 60 хв</p>
+                        <p><span class="material-icons">scatter_plot</span> Ноги/Сідниці</p>
+                        <p><span class="material-icons">star</span> Курс 10 сеансів</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Релакс масаж -->
+            <div class="type-card">
+                <div class="type-photo-container">
+                    <img src="{% static 'images/services/relax-massage.jpg' %}" alt="Релакс масаж" class="type-photo">
+                </div>
+                <div class="type-card-content">
+                    <h3>Релакс масаж</h3>
+                    <p class="type-style">Розслаблюючий</p>
+                    <div class="type-details">
+                        <p><span class="material-icons">schedule</span> 90 хв</p>
+                        <p><span class="material-icons">scatter_plot</span> Всього тіла</p>
+                        <p><span class="material-icons">star</span> Ароматерапія</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section class="massage-pricing">
+    <div class="container">
+        <div class="section-header">
+            <h2>Вартість послуг</h2>
+            <p class="section-description">Доступні ціни для вашого комфорту</p>
+        </div>
+
+        <div class="pricing-options">
+            <div class="pricing-category">
+                <div class="pricing-header">
+                    <h3>Разові сеанси</h3>
+                </div>
+                <div class="pricing-grid">
+                    <div class="price-item">
+                        <div class="price-label">Класичний (60 хв)</div>
+                        <div class="price-value">600 грн</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-label">Класичний (90 хв)</div>
+                        <div class="price-value">850 грн</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-label">Лікувальний</div>
+                        <div class="price-value">700 грн</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-label">Антицелюлітний масаж</div>
+                        <div class="price-value">750 грн</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-label">Релакс масаж</div>
+                        <div class="price-value">700 грн</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-category">
+                <div class="pricing-header">
+                    <h3>Абонементи</h3>
+                </div>
+                <div class="pricing-grid">
+                    <div class="price-item">
+                        <div class="price-label">5 сеансів</div>
+                        <div class="price-value">2750 грн</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-label">10 сеансів</div>
+                        <div class="price-value">5000 грн</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Requirements Section -->
+<section class="massage-requirements">
+    <div class="container">
+        <div class="section-header">
+            <h2>Важлива інформація</h2>
+            <p class="section-description">Щоб ваш досвід був максимально комфортним</p>
+        </div>
+
+        <div class="requirements-grid">
+            <div class="requirement-card">
+                <div class="requirement-icon">
+                    <span class="material-icons">access_time</span>
+                </div>
+                <h3>Графік</h3>
+                <ul>
+                    <li>Пн-Пт: 8:00 - 22:00</li>
+                    <li>Сб: 09:00 - 20:00</li>
+                    <li>Нд: вихідний</li>
+                </ul>
+            </div>
+            <div class="requirement-card">
+                <div class="requirement-icon">
+                    <span class="material-icons">warning</span>
+                </div>
+                <h3>Протипоказання</h3>
+                <ul>
+                    <li>Гострі запалення</li>
+                    <li>Вагітність</li>
+                    <li>Онкологія</li>
+                </ul>
+            </div>
+            <div class="requirement-card">
+                <div class="requirement-icon">
+                    <span class="material-icons">info</span>
+                </div>
+                <h3>Підготовка</h3>
+                <ul>
+                    <li>Не їжте за 1.5 год до сеансу</li>
+                    <li>Уникайте алкоголю</li>
+                    <li>Прийміть душ перед візитом</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'js/services/massage.js' %}"></script>
+{% endblock %}

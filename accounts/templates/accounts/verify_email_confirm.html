@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    {% if valid %}
+    <h2>Email підтверджено</h2>
+    <p>Ваш email успішно підтверджено!</p>
+    {% else %}
+    <h2>Помилка підтвердження</h2>
+    <p>Посилання для підтвердження недійсне або застаріле.</p>
+    {% endif %}
+</div>
+{% endblock %}
