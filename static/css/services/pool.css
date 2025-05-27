@@ -403,117 +403,136 @@ body {
     background-color: #f8f9fa;
 }
 
-.pool-pricing-options {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.pool-pricing-category {
-    background: var(--card-bg);
-    border-radius: var(--radius-lg);
-    padding: 30px;
-    box-shadow: var(--card-shadow);
-}
-
-.pool-pricing-header {
-    margin-bottom: 25px;
-    padding-bottom: 15px;
-    border-bottom: 2px solid #f0f4ff;
-}
-
-.pool-pricing-header h3 {
-    font-size: 1.3rem;
-    color: var(--text-color);
-    margin: 0;
-    text-align: center;
-}
-
-.pool-pricing-grid {
-    display: grid;
-    gap: 20px;
-}
-
-.pool-price-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 15px;
-    border-radius: var(--radius-md);
-    background-color: #f5f7ff;
-    transition: var(--transition);
-}
-
-.pool-price-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(67, 97, 238, 0.1);
-}
-
-.pool-price-label {
-    color: var(--text-color);
-    font-weight: 600;
-    margin-bottom: 8px;
-    font-size: 1.1rem;
-}
-
-.pool-price-value {
-    color: var(--primary-blue);
-    font-weight: 700;
+.pool-pricing-section h3 {
     font-size: 1.4rem;
+    color: var(--text-color);
+    margin-top: 40px;
+    text-align: center;
 }
 
-/* ========== Секція важливої інформації ========== */
-.pool-requirements-section {
+.pool-pricing-section h4 {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-top: 25px;
+    text-align: center;
+}
+
+.pricing-table {
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+.pricing-table table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    box-shadow: var(--card-shadow);
+    font-size: 0.95rem;
+    background-color: white;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+/* Стовпець "Категорія / Тип абонемента" */
+.pricing-table th:first-child,
+.pricing-table td:first-child {
+    width: 60%;
+    text-align: left;
+}
+
+/* Стовпець "Ціна" */
+/* Стовпець "Категорія / Тип абонемента" */
+.pricing-table th:first-child,
+.pricing-table td:first-child {
+    width: 60%;
+    text-align: left;
+}
+
+/* Стовпець "Ціна" */
+.pricing-table th:last-child {
+    width: 40%;
+    text-align: right;
+    font-weight: 600;
+    color: white; /* ✅ Тепер точно білий */
+}
+
+.pricing-table td:last-child {
+    width: 40%;
+    text-align: right;
+    font-weight: 600;
+    color: var(--text-color); /* Ціни у тілі таблиці лишаються темними */
+}
+
+.pricing-table th,
+.pricing-table td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.pricing-table th {
+    background-color: var(--primary-blue);
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.pricing-table td {
+    background-color: white;
+    font-size: 0.95rem;
+}
+
+/* Додатковий текст */
+.pricing-table p {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+
+/* ========== Важлива інформація (уніфікований стиль як у fitness) ========== */
+.pool-requirements {
     padding: 60px 0;
     background-color: white;
 }
 
-.pool-requirements-container {
+.pool-requirements .requirements-container {
     max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: var(--card-bg);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--card-shadow);
+    margin: 0;
+    padding-left: 20px;
 }
 
-.pool-requirements-title {
+.pool-requirements .requirements-title {
     font-size: 1.5rem;
     color: var(--text-color);
-    margin-bottom: 20px;
-    text-align: center;
-    padding-bottom: 15px;
-    border-bottom: 2px solid #f0f4ff;
+    margin-bottom: 25px;
+    text-align: left;
+    padding-left: 10px;
 }
 
-.pool-requirements-list {
+.pool-requirements .requirements-list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.pool-requirements-list li {
+.pool-requirements .requirements-list li {
     position: relative;
     margin-bottom: 15px;
     color: var(--text-color);
     line-height: 1.6;
-    padding-left: 30px;
-    font-size: 1rem;
+    padding-left: 25px;
+    text-align: left;
 }
 
-.pool-requirements-list li:before {
-    content: "";
+.pool-requirements .requirements-list li:before {
+    content: "•";
+    color: var(--primary-blue);
+    font-size: 1.2rem;
     position: absolute;
-    left: 0;
+    left: 5px;
     top: 50%;
     transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%234361ee"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>');
-    background-repeat: no-repeat;
-    background-size: contain;
 }
 
 /* ========== Адаптивність ========== */

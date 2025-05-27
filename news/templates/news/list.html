@@ -7,28 +7,31 @@
 
 {% block content %}
 <section class="news-hero">
+  <div class="news-hero-container">
     <div class="news-hero-content">
-        <h1>Новини СпортЦентру</h1>
-        <p>Актуальні події та оновлення нашого центру</p>
+      <h1>Новини СпортЦентру</h1>
+      <p class="hero-subtitle">Актуальні події та оновлення нашого центру</p>
     </div>
+  </div>
 </section>
 
+
 <section class="news-section">
-    <div class="container">
-        <div class="news-grid">
-            {% for news in news_list %}
-            <article class="news-card">
-                <div class="news-date">{{ news.date_published|date:"d.m.Y" }}</div>
-                <h2 class="news-title">{{ news.title }}</h2>
-                <div class="news-excerpt">
-                    <p>{{ news.content|truncatewords:30 }}</p>
-                </div>
-                <a href="{% url 'news:detail' pk=news.pk %}" class="news-read-more">Читати далі →</a>
-            </article>
-            {% empty %}
-            <p class="no-news">Новини відсутні. Будь ласка, завітайте пізніше.</p>
-            {% endfor %}
+  <div class="container">
+    <div class="news-grid">
+      {% for news in news_list %}
+      <article class="news-card">
+        <div class="news-date">{{ news.date_published|date:"d.m.Y" }}</div>
+        <h2 class="news-title">{{ news.title }}</h2>
+        <div class="news-excerpt">
+          <p>{{ news.content|truncatewords:30 }}</p>
         </div>
+        <a href="{% url 'news:detail' pk=news.pk %}" class="news-read-more">Читати далі →</a>
+      </article>
+      {% empty %}
+      <p class="no-news">Новини відсутні. Будь ласка, завітайте пізніше.</p>
+      {% endfor %}
     </div>
+  </div>
 </section>
 {% endblock %}

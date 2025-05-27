@@ -396,78 +396,89 @@ body {
 }
 
 /* ========== Секція вартості ========== */
+/* ========== Секція вартості ========== */
 .fitness-pricing {
     padding: var(--section-gap) 0;
     background-color: #f8f9fa;
 }
 
-.pricing-options {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.pricing-category {
-    background: var(--card-bg);
-    border-radius: var(--radius-lg);
-    padding: 30px;
-    box-shadow: var(--card-shadow);
-}
-
-.pricing-header {
-    margin-bottom: 25px;
-    padding-bottom: 15px;
-    border-bottom: 2px solid #f0f4ff;
-}
-
-.pricing-header h3 {
-    font-size: 1.3rem;
-    color: var(--text-color);
-    margin: 0;
-    text-align: center;
-}
-
-.pricing-grid {
-    display: grid;
-    gap: 20px;
-}
-
-.price-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 15px;
-    border-radius: var(--radius-md);
-    background-color: #f5f7ff;
-    transition: var(--transition);
-}
-
-.price-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(67, 97, 238, 0.1);
-}
-
-.price-label {
-    color: var(--text-color);
-    font-weight: 600;
-    margin-bottom: 8px;
-    font-size: 1.1rem;
-}
-
-.price-value {
-    color: var(--primary-blue);
-    font-weight: 700;
+.fitness-pricing .section-title {
     font-size: 1.4rem;
+    margin-top: 40px;
+    text-align: center;
+    color: var(--text-color);
 }
 
-.pricing-note {
+.pricing-table {
     margin-top: 20px;
-    font-size: 0.85rem;
-    color: var(--text-secondary);
+    margin-bottom: 60px;
+}
+
+.pricing-table table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    box-shadow: var(--card-shadow);
+    font-size: 0.95rem;
+    background-color: white;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.pricing-table th:first-child,
+.pricing-table td:first-child {
+    width: 60%;
+    text-align: left;
+}
+
+.pricing-table th:last-child,
+.pricing-table td:last-child {
+    width: 40%;
+    text-align: right;
+    font-weight: 600;
+}
+
+.pricing-table th {
+    background-color: var(--primary-blue);
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 10px 14px;
     text-align: center;
 }
+
+.pricing-table td {
+    background-color: white;
+    font-size: 0.95rem;
+    padding: 10px 14px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.pricing-table p {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .pricing-table table {
+        width: 100%;
+    }
+
+    .pricing-table th,
+    .pricing-table td {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+
+    .fitness-pricing .section-title {
+        font-size: 1.2rem;
+        margin-top: 30px;
+    }
+}
+
 
 /* ========== Секція важливої інформації ========== */
 .fitness-requirements {

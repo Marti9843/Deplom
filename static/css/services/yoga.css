@@ -293,6 +293,7 @@ body {
     margin-bottom: 12px;
     box-shadow: var(--card-shadow);
     transition: var(--transition);
+    position: relative;
 }
 
 .schedule-item:hover {
@@ -333,6 +334,10 @@ body {
     font-weight: 500;
     transition: var(--transition);
     font-size: 0.9rem;
+    min-width: 120px;
+    text-align: center;
+    white-space: nowrap;
+    box-sizing: border-box;
 }
 
 .signup-btn:hover {
@@ -341,71 +346,60 @@ body {
 }
 
 /* ========== Секція вартості ========== */
-.yoga-pricing {
-    padding: var(--section-gap) 0;
-    background-color: #f8f9fa;
+.yoga-pricing-section {
+  padding: var(--section-gap) 0;
+  background-color: #f8f9fa;
 }
 
-.pricing-options {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    margin-top: 40px;
+.yoga-pricing-section h3 {
+  font-size: 1.4rem;
+  color: var(--text-color);
+  margin-top: 40px;
+  text-align: center;
 }
 
-.pricing-category {
-    background: var(--card-bg);
-    border-radius: var(--radius-lg);
-    padding: 30px;
-    box-shadow: var(--card-shadow);
+.pricing-table {
+  margin-top: 20px;
+  margin-bottom: 60px;
 }
 
-.pricing-header {
-    margin-bottom: 25px;
-    padding-bottom: 15px;
-    border-bottom: 2px solid #f0f4ff;
+.pricing-table table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  box-shadow: var(--card-shadow);
+  font-size: 0.95rem;
+  background-color: white;
+  border-radius: var(--radius-md);
+  overflow: hidden;
 }
 
-.pricing-header h3 {
-    font-size: 1.3rem;
-    color: var(--text-color);
-    margin: 0;
-    text-align: center;
+.pricing-table th:first-child,
+.pricing-table td:first-child {
+  width: 60%;
+  text-align: left;
 }
 
-.pricing-grid {
-    display: grid;
-    gap: 20px;
+.pricing-table th:last-child,
+.pricing-table td:last-child {
+  width: 40%;
+  text-align: right;
+  font-weight: 600;
 }
 
-.price-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 15px;
-    border-radius: var(--radius-md);
-    background-color: #f5f7ff;
-    transition: var(--transition);
+.pricing-table th {
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 10px 12px;
+  font-size: 0.95rem;
 }
 
-.price-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(67, 97, 238, 0.1);
+.pricing-table td {
+  background-color: white;
+  padding: 10px 12px;
+  border-bottom: 1px solid #e0e0e0;
 }
 
-.price-label {
-    color: var(--text-color);
-    font-weight: 600;
-    margin-bottom: 8px;
-    font-size: 1.1rem;
-}
-
-.price-value {
-    color: var(--primary-blue);
-    font-weight: 700;
-    font-size: 1.4rem;
-}
 
 /* ========== Секція важливої інформації ========== */
 .yoga-requirements {
@@ -455,7 +449,8 @@ body {
 
 /* ========== Адаптивність ========== */
 @media (max-width: 1200px) {
-    .container {
+    .container,
+    .yoga-container {
         padding: 0 30px;
     }
 }
@@ -469,17 +464,18 @@ body {
         font-size: 2.5rem;
     }
 
-    .pricing-options {
+    .yoga-pricing-options {
         gap: 20px;
     }
 
-    .pricing-category {
+    .yoga-pricing-category {
         padding: 25px;
     }
 }
 
 @media (max-width: 900px) {
-    .yoga-grid {
+    .yoga-types-grid,
+    .yoga-programs-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -502,23 +498,36 @@ body {
         font-size: 1.1rem;
     }
 
-    .section-header h2 {
+    .section-header h2,
+    .yoga-section-header h2 {
         font-size: 1.8rem;
     }
 
-    .section-description {
+    .section-description,
+    .yoga-section-description {
         font-size: 1rem;
     }
 
-    /* Розклад */
+    .yoga-pricing-options {
+        grid-template-columns: 1fr;
+    }
+
+    .yoga-photo-container,
+    .yoga-program-photo-container {
+        height: 220px;
+    }
+
+    /* Адаптація розкладу для мобільних */
     .schedule-item {
         flex-direction: column;
         align-items: flex-start;
-        gap: 12px;
+        gap: 10px;
     }
 
     .time {
-        width: auto;
+        width: 100%;
+        color: var(--primary-blue);
+        font-weight: 600;
     }
 
     .class-info {
@@ -527,22 +536,26 @@ body {
 
     .signup-btn {
         width: 100%;
-        text-align: center;
+        margin-top: 10px;
     }
 
-    /* Вартість */
-    .pricing-options {
-        grid-template-columns: 1fr;
+    /* Адаптація важливої інформації */
+    .yoga-requirements-container {
+        padding: 15px;
     }
 
-    /* Напрямки */
-    .yoga-photo-container {
-        height: 220px;
+    .yoga-requirements-title {
+        font-size: 1.3rem;
+    }
+
+    .yoga-requirements-list li {
+        font-size: 0.95rem;
+        padding-left: 25px;
     }
 }
 
 @media (max-width: 650px) {
-    .benefits-grid {
+    .yoga-benefits-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -552,7 +565,8 @@ body {
         --section-gap: 50px;
     }
 
-    .container {
+    .container,
+    .yoga-container {
         padding: 0 20px;
     }
 
@@ -569,52 +583,45 @@ body {
         font-size: 1rem;
     }
 
-    .section-header h2 {
+    .section-header h2,
+    .yoga-section-header h2 {
         font-size: 1.7rem;
         margin-bottom: 10px;
     }
 
-    /* Переваги */
-    .benefits-grid,
-    .yoga-grid {
+    .yoga-benefits-grid,
+    .yoga-types-grid,
+    .yoga-programs-grid {
         grid-template-columns: 1fr;
     }
 
-    .benefit-card {
+    .yoga-benefit-card {
         padding: 30px 20px;
     }
 
-    /* Розклад */
     .tab {
         padding: 6px 14px;
         font-size: 0.9rem;
     }
 
-    .schedule-item {
-        padding: 15px;
-    }
-
-    /* Вартість */
-    .price-item {
+    .yoga-price-item {
         padding: 12px;
     }
 
-    .price-label {
+    .yoga-price-label {
         font-size: 1rem;
     }
 
-    .price-value {
+    .yoga-price-value {
         font-size: 1.2rem;
     }
 
-    /* Важлива інформація */
-    .requirements-title {
-        font-size: 1.3rem;
-    }
-
-    .requirements-list li {
-        padding-left: 25px;
-        font-size: 0.95rem;
+    /* Стиклі кнопки для мобільних */
+    .signup-btn {
+        position: sticky;
+        bottom: 20px;
+        z-index: 100;
+        box-shadow: 0 4px 12px rgba(67, 97, 238, 0.3);
     }
 }
 
@@ -623,13 +630,18 @@ body {
         font-size: 1.8rem;
     }
 
-    .cta-button {
-        padding: 10px 25px;
-        font-size: 0.95rem;
+    .yoga-requirements-title {
+        font-size: 1.2rem;
     }
 
-    .pricing-header h3 {
-        font-size: 1.2rem;
+    .yoga-requirements-list li {
+        font-size: 0.9rem;
+        padding-left: 22px;
+    }
+
+    .yoga-requirements-list li:before {
+        width: 16px;
+        height: 16px;
     }
 }
 
@@ -639,8 +651,8 @@ body {
         font-size: 0.85rem;
     }
 
-    .price-label,
-    .price-value {
+    .yoga-price-label,
+    .yoga-price-value {
         font-size: 0.95rem;
     }
 }

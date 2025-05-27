@@ -221,137 +221,97 @@ body {
     color: var(--primary-blue);
 }
 
-/* Секція вартості */
-.massage-pricing {
-    padding: var(--section-gap) 0;
-    background-color: #f8f9fa;
+/* ========== Секція вартості (таблична) ========== */
+.massage-pricing-section {
+  padding: var(--section-gap) 0;
+  background-color: #f8f9fa;
 }
 
-.pricing-options {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    margin-top: 40px;
+.massage-pricing-section h3 {
+  font-size: 1.4rem;
+  color: var(--text-color);
+  margin-top: 40px;
+  text-align: center;
 }
 
-.pricing-category {
-    background: var(--card-bg);
-    border-radius: var(--radius-lg);
-    padding: 30px;
-    box-shadow: var(--card-shadow);
+.pricing-table {
+  margin-top: 20px;
+  margin-bottom: 60px;
 }
 
-.pricing-header {
-    margin-bottom: 25px;
-    padding-bottom: 15px;
-    border-bottom: 2px solid #f0f4ff;
+.pricing-table table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  box-shadow: var(--card-shadow);
+  font-size: 0.95rem;
+  background-color: white;
+  border-radius: var(--radius-md);
+  overflow: hidden;
 }
 
-.pricing-header h3 {
-    font-size: 1.3rem;
-    color: var(--text-color);
-    margin: 0;
-    text-align: center;
+.pricing-table th:first-child,
+.pricing-table td:first-child {
+  width: 60%;
+  text-align: left;
 }
 
-.pricing-grid {
-    display: grid;
-    gap: 20px;
+.pricing-table th:last-child,
+.pricing-table td:last-child {
+  width: 40%;
+  text-align: right;
+  font-weight: 600;
 }
 
-.price-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 15px;
-    border-radius: var(--radius-md);
-    background-color: #f5f7ff;
-    transition: var(--transition);
+.pricing-table th {
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 10px 12px;
+  font-size: 0.95rem;
 }
 
-.price-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(67, 97, 238, 0.1);
+.pricing-table td {
+  background-color: white;
+  padding: 10px 12px;
+  border-bottom: 1px solid #e0e0e0;
 }
 
-.price-label {
-    color: var(--text-color);
-    font-weight: 600;
-    margin-bottom: 8px;
-    font-size: 1.1rem;
-}
-
-.price-value {
-    color: var(--primary-blue);
-    font-weight: 700;
-    font-size: 1.4rem;
-}
-
-/* Секція важливої інформації */
+/* ========== Секція важливої інформації ========== */
 .massage-requirements {
-    padding: var(--section-gap) 0;
+    padding: 60px 0;
     background-color: white;
 }
 
-.requirements-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-    margin-top: 40px;
+.massage-requirements-container {
+    max-width: 800px;
+    margin: 0;
+    padding-left: 20px;
 }
 
-.requirement-card {
-    background: var(--card-bg);
-    border-radius: var(--radius-lg);
-    padding: 30px;
-    box-shadow: var(--card-shadow);
-    transition: var(--transition);
-    text-align: left;
-}
-
-.requirement-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-}
-
-.requirement-icon {
-    width: 60px;
-    height: 60px;
-    background-color: #f0f4ff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.requirement-icon .material-icons {
-    font-size: 30px;
-    color: var(--primary-blue);
-}
-
-.requirement-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
+.massage-requirements-title {
+    font-size: 1.5rem;
     color: var(--text-color);
+    margin-bottom: 25px;
+    text-align: left;
+    padding-left: 10px;
 }
 
-.requirement-card ul {
+.massage-requirements-list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.requirement-card li {
-    margin-bottom: 10px;
-    padding-left: 25px;
+.massage-requirements-list li {
     position: relative;
+    margin-bottom: 15px;
     color: var(--text-color);
     line-height: 1.6;
+    padding-left: 25px;
+    text-align: left;
 }
 
-.requirement-card li:before {
+.massage-requirements-list li::before {
     content: "•";
     color: var(--primary-blue);
     font-size: 1.2rem;
