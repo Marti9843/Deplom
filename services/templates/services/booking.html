@@ -1,14 +1,30 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 <div class="booking-container">
-    <h1>Запис на послуги</h1>
-    <div class="booking-form">
-        <form method="post">
-            {% csrf_token %}
-            <!-- Тут буде форма запису -->
-            <button type="submit" class="btn btn-primary">Записатися</button>
-        </form>
-    </div>
+    <h2>Запис на заняття</h2>
+    <form id="booking-form" method="post">
+        {% csrf_token %}
+
+        <div class="form-group">
+            {{ form.service.label_tag }}
+            {{ form.service }}
+        </div>
+
+        <div class="form-group">
+            {{ form.activity.label_tag }}
+            {{ form.activity }}
+        </div>
+
+        <div class="form-group">
+            {{ form.trainer.label_tag }}
+            {{ form.trainer }}
+        </div>
+
+        <button type="submit" class="btn btn-primary">Записатися</button>
+    </form>
 </div>
+
+<script src="{% static 'js/booking.js' %}"></script>
 {% endblock %}
